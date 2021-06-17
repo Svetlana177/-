@@ -64,6 +64,7 @@ function endGame() {
   show($start);
   $game.innerHTML = '';
   $game.style.backgroundColor = '#ccc';
+
   hide($timeHeader);
   show($resultHeader);
 }
@@ -94,6 +95,7 @@ function renderBox () {
   box.style.top = getRandom(0, maxTop) + 'px';
   box.style.left = getRandom(0, maxLeft) + 'px';
   box.style.cursor = 'pointer';
+
   box.setAttribute('data-box', 'true');
 
   $game.insertAdjacentElement('afterbegin', box);
@@ -106,3 +108,4 @@ function getRandom(min, max) {
 function generateColor() {
   return '#' + Math.floor(Math.random()*16777215).toString(16);
 }
+
